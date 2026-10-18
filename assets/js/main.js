@@ -1,8 +1,8 @@
-/* Gümüşhaneliler Egzoz — sayfa davranışları
- * - Mobil menü
- * - Türkiye saatine göre açık / kapalı durumu ve çalışma saatleri tablosu
- * - WhatsApp bağlantıları
- * - Arıza bulucu (yalnızca ana sayfada)
+/* Gümüşhaneliler Egzoz — client-side behaviour
+ * - Mobile navigation
+ * - Open / closed status and opening hours table (Europe/Istanbul time)
+ * - WhatsApp deep links
+ * - Fault finder (home page only)
  */
 (() => {
   "use strict";
@@ -12,12 +12,12 @@
   const $ = (id) => document.getElementById(id);
   const waLink = (text) => `https://wa.me/${PHONE_WA}?text=${encodeURIComponent(text)}`;
 
-  /* ---------- WhatsApp bağlantıları ---------- */
+  /* ---------- WhatsApp links ---------- */
   document.querySelectorAll("[data-wa]").forEach((a) => {
     a.href = waLink("Merhaba, egzoz için bilgi almak istiyorum.");
   });
 
-  /* ---------- Mobil menü ---------- */
+  /* ---------- Mobile navigation ---------- */
   const nav = $("nav");
   const menuBtn = $("menuBtn");
   if (nav && menuBtn) {
@@ -30,7 +30,7 @@
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
   }
 
-  /* ---------- Çalışma saatleri (Türkiye saati) ---------- */
+  /* ---------- Opening hours (Istanbul time) ---------- */
   const OPEN_MIN = 9 * 60;
   const CLOSE_MIN = 19 * 60;
   const DAYS = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"];
@@ -67,7 +67,7 @@
     }).join("");
   }
 
-  /* ---------- Arıza bulucu ---------- */
+  /* ---------- Fault finder ---------- */
   const form = $("form");
   const symptomsEl = $("symptoms");
   if (!form || !symptomsEl) return;
@@ -80,7 +80,7 @@
     ["yakit", "Yakıt tüketimi arttı"], ["muayene", "Muayeneden kaldı"],
   ];
 
-  // Her olası arıza: belirtilere göre puan (w), aciliyet (urg), yapılacak iş (svc), hizmet sayfası (page)
+  // Each possible fault: symptom weights (w), urgency (urg), recommended job (svc), service page slug (page)
   const CAUSES = [
     { name: "Susturucu delinmiş", w: { ses: 3, pas: 3, koku: 1, muayene: 1 }, urg: "mid",
       svc: "Egzoz tamiri veya değişimi", page: "egzoz-degisimi",

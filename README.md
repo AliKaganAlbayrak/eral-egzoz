@@ -1,163 +1,164 @@
 <div align="center">
 
-<img src="assets/img/favicon.svg" width="72" alt="Gümüşhaneliler Egzoz logosu">
+<img src="assets/img/favicon.svg" width="72" alt="Gümüşhaneliler Egzoz logo">
 
 # Gümüşhaneliler Egzoz
 
-**Esenyurt Fatih Oto Sanayi Sitesi'nde egzoz, katalizatör ve DPF servisi için web sitesi**
+**Website for an exhaust, catalytic converter and DPF repair shop in Esenyurt, Istanbul**
 
-[Canlı site](https://alikaganalbayrak.github.io/gumushaneliler-egzoz/) · [Değişiklikler](CHANGELOG.md)
+[Live site](https://alikaganalbayrak.github.io/gumushaneliler-egzoz/) · [Changelog](CHANGELOG.md)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-derleme-3776AB?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-build-3776AB?logo=python&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?logo=githubpages&logoColor=white)
 
 </div>
 
 ---
 
-## Proje hakkında
+## About
 
-Bu site, müşterilerin egzozla ilgili yaşadıkları sorunu internetten anlatıp **olası arızayı ve aciliyetini öğrenmesi**, ardından **tek tuşla WhatsApp'tan dükkâna ulaşması** için hazırlandı.
+Gümüşhaneliler Egzoz is an exhaust repair shop in Fatih Oto Sanayi Sitesi, Esenyurt (Istanbul) and an authorized Matay exhaust service. This website lets customers **describe their car's symptoms online, see the most likely fault and how urgent it is**, and then **contact the shop on WhatsApp with one tap**. The message arrives pre-filled with the car details and symptoms, so the mechanic knows the problem before picking up the phone.
 
-Site herhangi bir sunucu, veritabanı ya da kütüphane gerektirmez. Sayfalar küçük bir Python betiğiyle şablonlardan üretilir ve düz HTML, CSS ve JavaScript olarak ücretsiz GitHub Pages'te yayınlanır.
+The site needs no server, database or framework. Pages are rendered from templates by a small Python script and served as plain HTML, CSS and JavaScript on GitHub Pages at no cost.
 
-## Özellikler
+> The site content is in Turkish because it is written for the shop's local customers. Code, comments and documentation are in English.
 
-| Özellik | Açıklama |
+## Features
+
+| Feature | Description |
 | --- | --- |
-| **Arıza bulucu** | Müşteri 14 belirtiden seçer, aracını yazar. Site en olası sorunu ve aciliyet derecesini (Acil / Orta / Düşük) gösterir. |
-| **Hazır WhatsApp mesajı** | Seçilen belirtiler, araç bilgisi ve ön tahmin tek mesajda toplanır. Usta telefonu açmadan sorunu görür. |
-| **Açık / kapalı durumu** | Türkiye saatine göre dükkânın şu an açık olup olmadığını gösterir. |
-| **Hizmet kartları** | Her hizmetten, o hizmetin adıyla hazır WhatsApp mesajı açılır. |
-| **SSS** | DPF, katalizatör, muayene, fiyat ve randevu ile ilgili sık sorulan sorular. |
-| **Mobil uyumlu** | Telefonda menü, ekranın altında sabit WhatsApp ve Ara butonları. |
-| **Hizmet sayfaları** | Her hizmetin kendi sayfası var: belirtiler, çalışma adımları ve SSS. |
-| **SEO** | Sayfaya özel başlık ve açıklamalar, `sitemap.xml`, paylaşım görseli ve schema.org yapısal verisi (`AutoRepair`, `Service`, `FAQPage`, `BreadcrumbList`). |
+| **Fault finder** | Customers pick from 14 symptoms and enter their car. A weighted scoring model shows the single most likely fault with an urgency level (high / medium / low) and links to the matching service page. |
+| **Pre-filled WhatsApp message** | Symptoms, car details and the estimate are combined into one message sent through a `wa.me` deep link. |
+| **Live open / closed status** | Computed in the browser from Europe/Istanbul time. |
+| **Service pages** | One page per service with symptoms, a step-by-step process and an FAQ. |
+| **Local SEO** | Per-page titles, descriptions and canonical URLs, `sitemap.xml`, Open Graph share image and schema.org structured data (`AutoRepair`, `Service`, `FAQPage`, `BreadcrumbList`). |
+| **Responsive** | Mobile navigation and a sticky WhatsApp / call dock on small screens. |
+| **Accessible** | Semantic landmarks, visible focus states, labelled form controls and reduced-motion support. |
 
-## Proje yapısı
+## Project structure
 
 ```
 gumushaneliler-egzoz/
-├── templates/               # Sayfa şablonları (DÜZENLENEN dosyalar)
-│   ├── base.html            # <head>, SEO etiketleri, sayfa iskeleti
-│   ├── home.html            # Ana sayfa içeriği
-│   ├── service.html         # Hizmet sayfası şablonu
-│   └── partials/            # Üst menü ve alt bilgi
+├── templates/               # Page templates (edit these)
+│   ├── base.html            # <head>, SEO tags, page shell
+│   ├── home.html            # Home page content
+│   ├── service.html         # Service page template
+│   └── partials/            # Header and footer
 ├── tools/
-│   ├── site_data.py         # İşletme bilgileri, hizmet metinleri, SSS
-│   ├── build.py             # Şablonlardan siteyi üretir
-│   └── make_images.py       # Paylaşım görseli ve telefon ikonu
+│   ├── site_data.py         # Business details, service copy, FAQ
+│   ├── build.py             # Renders the site from the templates
+│   └── make_images.py       # Generates the share image and touch icon
 ├── assets/
-│   ├── css/style.css        # Tasarım (renkler en üstte :root içinde)
-│   ├── js/main.js           # Arıza bulucu, menü, saatler
-│   └── img/                 # Logo, ikonlar, paylaşım görseli
-├── index.html               # ÜRETİLİR
-├── hizmetler/<hizmet>/      # ÜRETİLİR, her hizmete bir sayfa
-├── 404.html                 # ÜRETİLİR
-├── sitemap.xml, robots.txt  # ÜRETİLİR
+│   ├── css/style.css        # Styles (design tokens in :root)
+│   ├── js/main.js           # Fault finder, navigation, opening hours
+│   └── img/                 # Logo, icons, share image
+├── index.html               # generated
+├── hizmetler/<service>/     # generated, one page per service
+├── 404.html                 # generated
+├── sitemap.xml, robots.txt  # generated
 ├── CHANGELOG.md
 └── README.md
 ```
 
-> `index.html`, `hizmetler/`, `404.html`, `sitemap.xml` ve `robots.txt` elle düzenlenmez. Değişiklik `templates/` veya `tools/site_data.py` içinde yapılır, sonra site yeniden üretilir.
+> Generated files (`index.html`, `hizmetler/`, `404.html`, `sitemap.xml`, `robots.txt`) are committed so GitHub Pages can serve them, but they should not be edited by hand. Change `templates/` or `tools/site_data.py` and rebuild.
 
-## Geliştirme
+## Development
 
-Gereken tek şey Python 3.8 veya üstü.
+Requirements: Python 3.8 or newer. No other dependencies.
 
 ```bash
 python tools/build.py
 ```
 
-Siteyi bilgisayarda görmek için:
+Preview locally:
 
 ```bash
 python -m http.server 8000
 ```
 
-Sonra tarayıcıda `http://localhost:8000` adresini açın.
+Then open `http://localhost:8000`.
 
-Paylaşım görselini yeniden üretmek için (isteğe bağlı):
+Regenerate the share image and touch icon (optional):
 
 ```bash
 pip install pillow
 python tools/make_images.py
 ```
 
-## Bilgileri güncelleme
+## Editing content
 
-| Ne değişecek | Nerede |
+| What | Where |
 | --- | --- |
-| Telefon, adres, saatler, bölgeler | `tools/site_data.py` içinde `BUSINESS` ve `templates/` |
-| WhatsApp numarası (arıza bulucu) | `assets/js/main.js` içinde `PHONE_WA` |
-| Hizmetler ve hizmet sayfası metinleri | `tools/site_data.py` içinde `SERVICES` |
-| Ana sayfa SSS | `tools/site_data.py` içinde `HOME_FAQ` |
-| Belirtiler ve olası arızalar | `assets/js/main.js` içinde `SYMPTOMS` ve `CAUSES` |
-| Renkler ve yazı tipleri | `assets/css/style.css` en üstteki `:root` |
-| Site adresi (alan adı) | `tools/site_data.py` içinde `BASE_URL` |
+| Phone numbers, address, hours, service area | `BUSINESS` in `tools/site_data.py`, plus `templates/` |
+| WhatsApp number used by the fault finder | `PHONE_WA` in `assets/js/main.js` |
+| Services and service page copy | `SERVICES` in `tools/site_data.py` |
+| Home page FAQ | `HOME_FAQ` in `tools/site_data.py` |
+| Symptoms and possible faults | `SYMPTOMS` and `CAUSES` in `assets/js/main.js` |
+| Colors and fonts | `:root` at the top of `assets/css/style.css` |
+| Site URL (custom domain) | `BASE_URL` in `tools/site_data.py` |
 
-Yeni bir hizmet sayfası eklemek için `SERVICES` listesine bir kayıt ekleyip `python tools/build.py` çalıştırmak yeterlidir. Menü, alt bilgi, site haritası ve "Diğer hizmetler" listesi kendiliğinden güncellenir.
+To add a service page, append an entry to `SERVICES` and run `python tools/build.py`. The navigation, footer, sitemap and "other services" sidebar update automatically.
 
-### Arıza bulucu nasıl çalışır
+### How the fault finder works
 
-`CAUSES` listesindeki her arızanın, belirtilere göre puanları vardır (`w`). Müşterinin seçtiği belirtilerin puanları toplanır ve en yüksek puanlı arıza gösterilir. Dizel araçlarda DPF puanı artırılır, benzinli araçlarda azaltılır. Sonuçtaki "Yapılacak iş" ilgili hizmet sayfasına bağlanır.
+Every fault in `CAUSES` has a weight per symptom (`w`). The weights of the selected symptoms are summed and the highest-scoring fault is shown. DPF faults are boosted for diesel cars and damped for petrol and LPG cars. Faults scoring below 2 are ignored; if nothing qualifies, the customer is asked to get in touch for an inspection.
 
 ```js
-{ name: "Arıza adı", w: { ses: 3, koku: 2 }, urg: "mid", svc: "Yapılacak iş", page: "egzoz-tamiri", why: "Kısa açıklama." }
+{ name: "Fault name", w: { ses: 3, koku: 2 }, urg: "mid", svc: "Recommended job", page: "egzoz-tamiri", why: "Short explanation." }
 ```
 
-`urg` değeri `high` (acil), `mid` (orta) veya `low` (düşük) olabilir.
+`urg` is one of `high`, `mid` or `low`.
 
-> Arıza bulucu yalnızca bir ön tahmindir. Kesin teşhis için araç dükkânda kontrol edilir.
+> The fault finder only gives a preliminary estimate. A definitive diagnosis is made at the shop.
 
-## Arama motorları (SEO)
+## SEO
 
-Sitenin Google'da "Esenyurt egzoz", "Esenyurt DPF temizliği" gibi aramalarda çıkması için:
+The site targets local searches such as "Esenyurt egzoz" and "Esenyurt DPF temizliği":
 
-- Her sayfanın kendine ait başlığı, açıklaması ve kalıcı adresi (`canonical`) var.
-- Her hizmetin ayrı bir sayfası var. Google her sayfayı ayrı bir arama sonucu olarak gösterebilir.
-- `sitemap.xml` tüm sayfaları listeler, `robots.txt` site haritasını gösterir.
-- schema.org yapısal verisi Google'a işletmenin adını, adresini, telefonunu, saatlerini, hizmetlerini ve SSS'lerini bildirir.
+- Every page has its own title, meta description and canonical URL.
+- Each service has a dedicated page that can rank on its own.
+- `sitemap.xml` lists every page and `robots.txt` points to it.
+- schema.org structured data describes the business, its services, opening hours and FAQs.
 
-Site sahibinin yapması gerekenler:
+Recommended steps for the site owner:
 
-1. **Google İşletme Profili** açmak: [business.google.com](https://business.google.com). Haritada ve "yakınımdaki egzozcu" aramalarında çıkmanın en etkili yolu budur. Profilde site adresi olarak bu site girilir.
-2. **Google Search Console**'a siteyi eklemek: [search.google.com/search-console](https://search.google.com/search-console). Site doğrulandıktan sonra `sitemap.xml` gönderilir.
-3. Müşterilerden Google'da yorum istemek.
+1. Create a **Google Business Profile** at [business.google.com](https://business.google.com) and link this website. This is the most effective way to appear in Maps and "near me" searches.
+2. Add the site to **Google Search Console** at [search.google.com/search-console](https://search.google.com/search-console) and submit `sitemap.xml`.
+3. Ask customers for Google reviews.
 
-## Yayınlama
+## Deployment
 
-Site, `main` dalından **GitHub Pages** ile yayınlanır. `main` dalına gönderilen her değişiklik birkaç dakika içinde canlı siteye yansır.
+The site is deployed with **GitHub Pages** from the `main` branch. Every push to `main` goes live within a few minutes.
 
-Kendi alan adını (ör. `gumushanelileregzoz.com`) bağlamak için:
+To use a custom domain (for example `gumushanelileregzoz.com`):
 
-1. Alan adı satın alınır ve DNS ayarlarından GitHub Pages'e yönlendirilir.
-2. Depoya alan adını içeren bir `CNAME` dosyası eklenir.
-3. `tools/site_data.py` içindeki `BASE_URL` yeni adresle değiştirilir ve `python tools/build.py` çalıştırılır.
+1. Register the domain and point its DNS records to GitHub Pages.
+2. Add a `CNAME` file containing the domain to the repository root.
+3. Set `BASE_URL` in `tools/site_data.py` to the new address and run `python tools/build.py`.
 
-## Yol haritası
+## Roadmap
 
-- [x] Arıza bulucu ve WhatsApp'a hazır mesaj
-- [x] Kartvizitteki kimliğe uygun kurumsal tasarım
-- [x] SEO etiketleri ve yapısal veri
-- [x] Her hizmet için ayrı sayfa, site haritası ve paylaşım görseli
-- [ ] Dükkânın ve yapılan işlerin gerçek fotoğrafları
-- [ ] Google İşletme Profili ve harita konumu
-- [ ] Google Search Console kaydı
-- [ ] Kendi alan adı
-- [ ] Müşteri yorumları
-- [ ] Serbest yazıyla arıza tarifi (yapay zekâ desteği)
+- [x] Fault finder with pre-filled WhatsApp message
+- [x] Corporate design based on the shop's business card
+- [x] SEO metadata and structured data
+- [x] Dedicated service pages, sitemap and share image
+- [ ] Real photos of the shop and completed work
+- [ ] Google Business Profile and map location
+- [ ] Google Search Console
+- [ ] Custom domain
+- [ ] Customer reviews
+- [ ] Free-text fault description with AI assistance
 
-## İletişim
+## Contact
 
 **Gümüşhaneliler Egzoz**
-Fatih Oto Sanayi Sitesi C6 Blok No:6, Esenyurt / İstanbul
-Erdal Albayrak: 0537 463 88 38 · Dükkân: 0212 690 32 18
-Pazartesi–Cumartesi 09:00–19:00
+Fatih Oto Sanayi Sitesi C6 Blok No:6, Esenyurt / Istanbul, Türkiye
+Erdal Albayrak: +90 537 463 88 38 · Shop: +90 212 690 32 18
+Monday–Saturday, 09:00–19:00
 
----
+## License
 
-<sub>© Gümüşhaneliler Egzoz. Tüm hakları saklıdır.</sub>
+© Gümüşhaneliler Egzoz. All rights reserved. The source code is public for reference; the business name, logo and content may not be reused without permission.

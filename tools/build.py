@@ -1,10 +1,10 @@
-"""Siteyi şablonlardan üretir.
+"""Static site generator: renders the site from templates/ and tools/site_data.py.
 
-Kullanım:
+Usage:
     python tools/build.py
 
-Üretilen dosyalar: index.html, hizmetler/<slug>/index.html, 404.html, sitemap.xml, robots.txt
-Ek bağımlılık gerektirmez (sadece Python 3.8+).
+Outputs: index.html, hizmetler/<slug>/index.html, 404.html, sitemap.xml, robots.txt
+No third-party dependencies (Python 3.8+).
 """
 
 from __future__ import annotations
@@ -35,12 +35,12 @@ def render(tpl: str, **values: str) -> str:
         tpl = tpl.replace("{{" + key + "}}", value)
     if "{{" in tpl:
         start = tpl.index("{{")
-        raise ValueError(f"Doldurulmamış alan: {tpl[start:start + 40]}")
+        raise ValueError(f"Unfilled placeholder: {tpl[start:start + 40]}")
     return tpl
 
 
 def _os_path(path: Path) -> Path:
-    # Windows'ta 260 karakteri aşan klasör yolları için uzun yol öneki
+    # Use the extended-length path prefix on Windows to avoid the 260-character MAX_PATH limit
     if os.name == "nt" and not str(path).startswith("\\\\?\\"):
         return Path("\\\\?\\" + str(path.resolve()))
     return path
@@ -50,7 +50,7 @@ def write(path: Path, text: str) -> None:
     target = _os_path(path)
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(text, encoding="utf-8", newline="\n")
-    print("  yazıldı:", path.relative_to(ROOT).as_posix())
+    print("  wrote:", path.relative_to(ROOT).as_posix())
 
 
 def esc(text: str) -> str:
@@ -241,9 +241,9 @@ def build_sitemap() -> None:
 
 
 if __name__ == "__main__":
-    print("Site üretiliyor...")
+    print("Building site...")
     build_home()
     build_services()
     build_404()
     build_sitemap()
-    print("Bitti.")
+    print("Done.")

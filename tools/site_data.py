@@ -1,9 +1,10 @@
-"""Sitenin tüm içerik verisi: işletme bilgileri, hizmet sayfaları ve SSS.
+"""All site content: business details, service pages and FAQ.
 
-Bilgi değiştirmek için bu dosyayı düzenleyin, sonra `python tools/build.py` çalıştırın.
+Edit this file, then run `python tools/build.py` to regenerate the site.
+Page copy is intentionally in Turkish (the site's audience).
 """
 
-# Alan adı alındığında burayı değiştirin (sonunda / olmadan), ör. "https://gumushanelileregzoz.com"
+# Change this when a custom domain is set up (no trailing slash), e.g. "https://gumushanelileregzoz.com"
 BASE_URL = "https://alikaganalbayrak.github.io/gumushaneliler-egzoz"
 
 BUSINESS = {
@@ -32,7 +33,7 @@ ICONS = {
     "cihaz": '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="m7 11 2-2 2 3 2-4 2 3h2"/>',
 }
 
-# Her hizmet kendi sayfasına sahiptir: /hizmetler/<slug>/
+# Each service gets its own page at /hizmetler/<slug>/
 SERVICES = [
     {
         "slug": "dpf-temizligi",
