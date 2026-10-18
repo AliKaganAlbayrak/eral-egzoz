@@ -1,0 +1,59 @@
+<header class="page-hero">
+  <div class="in">
+    <nav class="crumbs" aria-label="Sayfa yolu"><a href="{{root}}">Ana Sayfa</a><span aria-hidden="true">/</span><a href="{{root}}#hizmetler">Hizmetler</a><span aria-hidden="true">/</span><span aria-current="page">{{name}}</span></nav>
+    <div class="page-hero-row">
+      <div class="page-ico">{{icon}}</div>
+      <div class="page-hero-text">
+        <h1>{{h1}}</h1>
+        <p class="lead">{{lead}}</p>
+        <div class="ctas">
+          <a class="btn red" href="tel:{{gsm_intl}}"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Hemen Ara</a>
+          <a class="btn wa" href="{{wa_link}}" target="_blank" rel="noopener">WhatsApp'tan Sor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="page-body">
+  <div class="in page-grid">
+    <article class="prose">
+      {{body}}
+
+      <h2>Hangi belirtilerde gelmelisiniz?</h2>
+      <ul class="checks">{{symptoms}}</ul>
+
+      <h2>Nasıl yapıyoruz?</h2>
+      <ol class="mini-steps">{{process}}</ol>
+
+      <h2>Sık sorulan sorular</h2>
+      <div class="faq faq-left">{{faq}}</div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="quick">
+        <div class="quick-head"><h3>Bilgi ve fiyat</h3><p>Araç bilgilerinizle arayın veya yazın.</p></div>
+        <div class="quick-body">
+          <a class="qrow" href="tel:{{gsm_intl}}"><span class="qicon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span><span><small>{{contact_person}}</small><b>{{gsm}}</b></span></a>
+          <a class="qrow" href="tel:{{landline_intl}}"><span class="qicon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V4h8v3M7 12h10"/></svg></span><span><small>Dükkân</small><b>{{landline}}</b></span></a>
+          <a class="qrow" href="{{maps}}" target="_blank" rel="noopener"><span class="qicon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span><small>Adres</small><b>Fatih Oto Sanayi C6/6</b></span></a>
+          <a class="btn wa" href="{{wa_link}}" target="_blank" rel="noopener">WhatsApp'tan Yazın</a>
+        </div>
+      </div>
+      <div class="side-list">
+        <h3>Diğer hizmetler</h3>
+        <ul>{{other_services}}</ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="in">
+    <div>
+      <h2>Sorunun ne olduğundan emin değil misiniz?</h2>
+      <p>Arıza bulucuyla belirtileri seçin, olası sorunu ve aciliyetini hemen görün.</p>
+    </div>
+    <a class="btn white" href="{{root}}#ariza">Arıza Bulucuyu Aç</a>
+  </div>
+</section>
