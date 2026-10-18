@@ -3,6 +3,12 @@
 All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project follows [Semantic Versioning](https://semver.org/).
 
+## [1.2.0] - 2026-10-19
+
+### Changed
+- Rebranded from "Gümüşhaneliler Egzoz" to "ER AL Egzoz" across the site, logo, share image, structured data and documentation
+- Repository renamed to `eral-egzoz`; the site now lives at https://alikaganalbayrak.github.io/eral-egzoz/
+
 ## [1.1.1] - 2026-10-18
 
 ### Changed

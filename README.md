@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="assets/img/favicon.svg" width="72" alt="Gümüşhaneliler Egzoz logo">
+<img src="assets/img/favicon.svg" width="72" alt="ER AL Egzoz logo">
 
-# Gümüşhaneliler Egzoz
+# ER AL Egzoz
 
 **Website for an exhaust, catalytic converter and DPF repair shop in Esenyurt, Istanbul**
 
-[Live site](https://alikaganalbayrak.github.io/gumushaneliler-egzoz/) · [Changelog](CHANGELOG.md)
+[Live site](https://alikaganalbayrak.github.io/eral-egzoz/) · [Changelog](CHANGELOG.md)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -20,7 +20,7 @@
 
 ## About
 
-Gümüşhaneliler Egzoz is an exhaust repair shop in Fatih Oto Sanayi Sitesi, Esenyurt (Istanbul) and an authorized Matay exhaust service. This website lets customers **describe their car's symptoms online, see the most likely fault and how urgent it is**, and then **contact the shop on WhatsApp with one tap**. The message arrives pre-filled with the car details and symptoms, so the mechanic knows the problem before picking up the phone.
+ER AL Egzoz is an exhaust repair shop in Fatih Oto Sanayi Sitesi, Esenyurt (Istanbul) and an authorized Matay exhaust service. This website lets customers **describe their car's symptoms online, see the most likely fault and how urgent it is**, and then **contact the shop on WhatsApp with one tap**. The message arrives pre-filled with the car details and symptoms, so the mechanic knows the problem before picking up the phone.
 
 The site needs no server, database or framework. Pages are rendered from templates by a small Python script and served as plain HTML, CSS and JavaScript on GitHub Pages at no cost.
 
@@ -41,7 +41,7 @@ The site needs no server, database or framework. Pages are rendered from templat
 ## Project structure
 
 ```
-gumushaneliler-egzoz/
+eral-egzoz/
 ├── templates/               # Page templates (edit these)
 │   ├── base.html            # <head>, SEO tags, page shell
 │   ├── home.html            # Home page content
@@ -133,7 +133,7 @@ Recommended steps for the site owner:
 
 The site is deployed with **GitHub Pages** from the `main` branch. Every push to `main` goes live within a few minutes.
 
-To use a custom domain (for example `gumushanelileregzoz.com`):
+To use a custom domain (for example `eralegzoz.com`):
 
 1. Register the domain and point its DNS records to GitHub Pages.
 2. Add a `CNAME` file containing the domain to the repository root.
@@ -154,11 +154,11 @@ To use a custom domain (for example `gumushanelileregzoz.com`):
 
 ## Contact
 
-**Gümüşhaneliler Egzoz**
+**ER AL Egzoz**
 Fatih Oto Sanayi Sitesi C6 Blok No:6, Esenyurt / Istanbul, Türkiye
 Erdal Albayrak: +90 537 463 88 38 · Shop: +90 212 690 32 18
 Monday–Saturday, 09:00–19:00
 
 ## License
 
-© Gümüşhaneliler Egzoz. All rights reserved. The source code is public for reference; the business name, logo and content may not be reused without permission.
+© ER AL Egzoz. All rights reserved. The source code is public for reference; the business name, logo and content may not be reused without permission.

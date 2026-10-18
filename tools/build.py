@@ -155,7 +155,7 @@ def build_home() -> None:
     website = {"@context": "https://schema.org", "@type": "WebSite", "name": BUSINESS["name"], "url": BASE_URL + "/", "inLanguage": "tr-TR"}
     write(ROOT / "index.html", page(
         root="",
-        title="Esenyurt Egzoz Servisi | DPF Temizliği, Katalizatör | Gümüşhaneliler Egzoz",
+        title="Esenyurt Egzoz Servisi | DPF Temizliği, Katalizatör | ER AL Egzoz",
         description="Esenyurt Fatih Oto Sanayi Sitesi'nde Matay yetkili egzoz servisi. DPF temizliği, katalizatör, egzoz değişimi, egzoz tamiri ve kaynak. Online arıza bulucu ile sorununuzu öğrenin.",
         canonical=BASE_URL + "/",
         content=content,
@@ -209,7 +209,7 @@ def build_services() -> None:
         }
         write(ROOT / "hizmetler" / s["slug"] / "index.html", page(
             root=root,
-            title=f"{s['title']} | Gümüşhaneliler Egzoz",
+            title=f"{s['title']} | ER AL Egzoz",
             description=s["description"],
             canonical=url,
             content=content,
@@ -227,7 +227,7 @@ def build_404() -> None:
     <div class="ctas"><a class="btn red" href="{root}">Ana Sayfaya Dön</a><a class="btn outline" href="tel:{BUSINESS["gsm_intl"]}">{BUSINESS["gsm"]}</a></div>
   </div>
 </section>'''
-    write(ROOT / "404.html", page(root=root, title="Sayfa bulunamadı | Gümüşhaneliler Egzoz",
+    write(ROOT / "404.html", page(root=root, title="Sayfa bulunamadı | ER AL Egzoz",
                                   description="Aradığınız sayfa bulunamadı.", canonical=root, content=content,
                                   ld="", robots="noindex"))
 

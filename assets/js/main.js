@@ -1,4 +1,4 @@
-/* Gümüşhaneliler Egzoz — client-side behaviour
+/* ER AL Egzoz — client-side behaviour
  * - Mobile navigation
  * - Open / closed status and opening hours table (Europe/Istanbul time)
  * - WhatsApp deep links

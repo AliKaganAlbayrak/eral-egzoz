@@ -4,11 +4,11 @@ Edit this file, then run `python tools/build.py` to regenerate the site.
 Page copy is intentionally in Turkish (the site's audience).
 """
 
-# Change this when a custom domain is set up (no trailing slash), e.g. "https://gumushanelileregzoz.com"
-BASE_URL = "https://alikaganalbayrak.github.io/gumushaneliler-egzoz"
+# Change this when a custom domain is set up (no trailing slash), e.g. "https://eralegzoz.com"
+BASE_URL = "https://alikaganalbayrak.github.io/eral-egzoz"
 
 BUSINESS = {
-    "name": "Gümüşhaneliler Egzoz",
+    "name": "ER AL Egzoz",
     "owners": "Erdoğan & Erdal Albayrak",
     "contact_person": "Erdal Albayrak",
     "gsm": "0537 463 88 38",
@@ -66,7 +66,7 @@ SERVICES = [
         "name": "Katalizatör temizliği ve değişimi",
         "short": "Muayeneden kalan, koku yapan veya güç düşüren katalizatörler.",
         "title": "Esenyurt Katalizatör Temizliği ve Değişimi",
-        "description": "Esenyurt'ta katalizatör temizliği ve değişimi. Muayeneden emisyon yüzünden kalan, çürük yumurta kokusu yapan ve güç kaybettiren katalizatörler. Gümüşhaneliler Egzoz, Fatih Oto Sanayi.",
+        "description": "Esenyurt'ta katalizatör temizliği ve değişimi. Muayeneden emisyon yüzünden kalan, çürük yumurta kokusu yapan ve güç kaybettiren katalizatörler. ER AL Egzoz, Fatih Oto Sanayi.",
         "lead": "Aracınız muayeneden emisyon yüzünden mi kaldı, egzozdan çürük yumurta kokusu mu geliyor? Katalizatörü kontrol edip temizliyor veya değiştiriyoruz.",
         "body": [
             "Katalizatör (katalitik konvertör), egzoz gazındaki zararlı maddeleri daha az zararlı gazlara dönüştüren parçadır. Araç muayenesindeki emisyon testinden geçmek için katalizatörün düzgün çalışması gerekir.",
@@ -91,7 +91,7 @@ SERVICES = [
         "name": "Egzoz değişimi",
         "short": "Susturucu, ara boru ve arka egzoz değişimi. Orijinal Matay egzoz.",
         "title": "Esenyurt Egzoz Değişimi ve Susturucu",
-        "description": "Esenyurt'ta egzoz değişimi: susturucu, ara boru, arka egzoz. Matay yetkili servisi, orijinal Matay egzoz. Gümüşhaneliler Egzoz, Fatih Oto Sanayi Sitesi C6 Blok.",
+        "description": "Esenyurt'ta egzoz değişimi: susturucu, ara boru, arka egzoz. Matay yetkili servisi, orijinal Matay egzoz. ER AL Egzoz, Fatih Oto Sanayi Sitesi C6 Blok.",
         "lead": "Delinen, çürüyen veya ses yapan egzozunuzu aracınıza uygun orijinal Matay egzozla değiştiriyoruz.",
         "body": [
             "Egzoz sistemi; manifold, katalizatör, ara boru, susturucular ve arka egzozdan oluşur. Yol tuzu, nem ve ısı nedeniyle bu parçalar zamanla paslanır ve delinir. Delik bir susturucu aracın sesini artırır, egzoz gazının araç içine girmesine de yol açabilir.",
@@ -116,7 +116,7 @@ SERVICES = [
         "name": "Egzoz tamiri",
         "short": "Delinen, çatlayan egzozların ve kopan askıların tamiri.",
         "title": "Esenyurt Egzoz Tamiri",
-        "description": "Esenyurt'ta egzoz tamiri: delik, çatlak, kopan egzoz askısı, gaz kaçağı ve egzoz sesi. Gümüşhaneliler Egzoz, Fatih Oto Sanayi Sitesi. Hemen arayın: 0537 463 88 38.",
+        "description": "Esenyurt'ta egzoz tamiri: delik, çatlak, kopan egzoz askısı, gaz kaçağı ve egzoz sesi. ER AL Egzoz, Fatih Oto Sanayi Sitesi. Hemen arayın: 0537 463 88 38.",
         "lead": "Egzozunuz ses mi yapıyor, sarktı mı, araç içine koku mu geliyor? Değişim gerektirmeyen arızaları tamir ediyoruz.",
         "body": [
             "Her egzoz arızası parça değişimi gerektirmez. Küçük delikler, çatlaklar, gevşeyen kelepçeler ve kopan lastik askılar tamir edilerek egzoz sağlıklı şekilde kullanılmaya devam edebilir.",
@@ -141,7 +141,7 @@ SERVICES = [
         "name": "Egzoz kaynağı",
         "short": "Egzoz borusu, manifold ve bağlantı noktalarında kaynak işleri.",
         "title": "Esenyurt Egzoz Kaynağı ve Manifold Kaynağı",
-        "description": "Esenyurt'ta egzoz kaynağı: egzoz borusu, manifold çatlağı ve bağlantı noktaları. Gümüşhaneliler Egzoz, Fatih Oto Sanayi Sitesi C6 Blok No:6.",
+        "description": "Esenyurt'ta egzoz kaynağı: egzoz borusu, manifold çatlağı ve bağlantı noktaları. ER AL Egzoz, Fatih Oto Sanayi Sitesi C6 Blok No:6.",
         "lead": "Çatlayan manifold, delinen boru ya da kopan bağlantı. Egzoz hattındaki kaynak işlerini dükkânımızda yapıyoruz.",
         "body": [
             "Egzoz hattı sürekli ısınıp soğuduğu ve titreştiği için zamanla borularda ve bağlantı noktalarında çatlaklar oluşur. Bu çatlaklar ses ve gaz kaçağına yol açar.",
@@ -166,7 +166,7 @@ SERVICES = [
         "name": "Arıza kontrolü",
         "short": "Cihazla arıza kodu okuma, sensör ve egzoz hattı kontrolü.",
         "title": "Esenyurt Egzoz Arıza Kontrolü ve Arıza Tespiti",
-        "description": "Esenyurt'ta cihazla egzoz arıza tespiti: arıza kodu okuma, oksijen ve DPF fark basınç sensörü kontrolü. Gümüşhaneliler Egzoz, Fatih Oto Sanayi Sitesi.",
+        "description": "Esenyurt'ta cihazla egzoz arıza tespiti: arıza kodu okuma, oksijen ve DPF fark basınç sensörü kontrolü. ER AL Egzoz, Fatih Oto Sanayi Sitesi.",
         "lead": "Arıza lambası yandı ama sebebini bilmiyor musunuz? Cihazla arıza kodlarını okuyup sorunun egzozdan mı başka bir yerden mi geldiğini buluyoruz.",
         "body": [
             "Motor arıza lambası çok farklı sebeplerle yanabilir. Egzoz hattındaki oksijen sensörü, DPF fark basınç sensörü veya katalizatör arızaları bu sebeplerin başında gelir.",

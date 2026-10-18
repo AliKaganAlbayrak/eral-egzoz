@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alikaganalbayrak.github.io/gumushaneliler-egzoz/sitemap.xml
+Sitemap: https://alikaganalbayrak.github.io/eral-egzoz/sitemap.xml

@@ -74,7 +74,7 @@ def og_image() -> None:
     bold = ["arialbd.ttf", "DejaVuSans-Bold.ttf"]
     # yellow name tag
     tag_font = font(impact, 52)
-    tag = "GÜMÜŞHANELİLER"
+    tag = "ER AL"
     tb = d.textbbox((0, 0), tag, font=tag_font)
     d.rectangle([70, 110, 70 + tb[2] - tb[0] + 36, 110 + 80], fill=YELLOW, outline=(0, 0, 0), width=3)
     d.text((88, 118 - tb[1] + 6), tag, font=tag_font, fill=(0, 0, 0))
