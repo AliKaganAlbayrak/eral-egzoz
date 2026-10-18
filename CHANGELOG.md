@@ -1,0 +1,14 @@
+# Değişiklikler
+
+Bu dosyada sitedeki önemli değişiklikler tutulur.
+
+## [1.0.0] - 2026-10-18
+
+### Eklendi
+- Arıza bulucu: 14 belirti, araç bilgisi, tek olası arıza ve aciliyet derecesi
+- Seçimlerden hazırlanan WhatsApp mesajı ve kopyalama butonu
+- Kartvizitteki kırmızı, sarı ve beyaz kimliğe uygun kurumsal tasarım
+- Menü, hızlı iletişim kartı, hizmetler, neden biz, çalışma süreci, SSS ve iletişim bölümleri
+- Türkiye saatine göre açık / kapalı göstergesi
+- Mobilde açılır menü ve altta sabit WhatsApp / Ara butonları
+- SEO açıklamaları ve schema.org `AutoRepair` yapısal verisi
